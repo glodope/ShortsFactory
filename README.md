@@ -18,7 +18,7 @@ open source. Everything runs **on your machine** — your video is never uploade
 
 ## Download
 
-Grab the latest installer or portable build from the [**Releases**](../../releases) page.
+Grab the latest installer from the [**Releases**](../../releases) page.
 
 - `Shorts Factory Setup <version>.exe` — installer
 
@@ -37,7 +37,7 @@ npm start         # run in dev
 
 > The whisper.cpp binaries + model and yt-dlp are large third-party binaries and are **not**
 > stored in this repository (GitHub's 100 MB file limit). They are bundled into the release
-> installers. To build locally, place them under `resources/whisper/` and `resources/ytdlp/`.
+> installer. To build locally, place them under `resources/whisper/` and `resources/ytdlp/`.
 
 ## Tech stack
 
