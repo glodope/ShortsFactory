@@ -1,0 +1,30 @@
+{
+  "name": "shorts-factory",
+  "version": "1.8.1",
+  "description": "Local desktop app that converts long videos into vertical Shorts / TikTok / Reels with subtitles, filters and ad banners — open-source, license-free build",
+  "author": "ShortsFactory",
+  "license": "MIT",
+  "private": true,
+  "main": "out/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "teleproto": "^1.229.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/generator": "^7.25.0",
+    "@babel/parser": "^7.25.3",
+    "@babel/traverse": "^7.25.3",
+    "@babel/types": "^7.25.2",
+    "electron": "31.7.7",
+    "electron-builder": "^24.13.3",
+    "prettier": "^3.3.3"
+  }
+}

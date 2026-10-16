@@ -1,0 +1,43 @@
+appId: com.shortsfactory.app
+productName: Shorts Factory
+
+directories:
+  output: dist
+  buildResources: build
+
+# asar: false  -> the app ships as a plain, fully-open folder (resources/app/).
+# No asar archive => no EmbeddedAsarIntegrityValidation fuse, nothing locked,
+# every file is editable right in the installed app. This is the "clean open exe".
+asar: false
+
+# Do NOT enable Electron fuses that lock the build down.
+# (electron-builder leaves them at Electron defaults when this is omitted.)
+
+files:
+  - out/**/*
+  - package.json
+  - "!**/*.map"
+
+# Runtime assets the app loads from process.resourcesPath.
+# These are copied next to the app as resources/whisper, resources/ytdlp, resources/fonts.
+extraResources:
+  - from: resources/whisper
+    to: whisper
+  - from: resources/ytdlp
+    to: ytdlp
+  - from: resources/fonts
+    to: fonts
+
+win:
+  target:
+    - nsis
+    - portable
+  icon: build/icon.ico
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false
+
+# ffmpeg-static / ffprobe-static ship their binaries inside node_modules and,
+# with asar:false, are resolved directly from resources/app/node_modules — no unpack needed.
