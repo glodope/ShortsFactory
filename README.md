@@ -21,7 +21,6 @@ open source. Everything runs **on your machine** — your video is never uploade
 Grab the latest installer or portable build from the [**Releases**](../../releases) page.
 
 - `Shorts Factory Setup <version>.exe` — installer
-- `Shorts Factory <version>.exe` — portable
 
 Windows x64.
 
@@ -31,7 +30,7 @@ Requires [Node.js](https://nodejs.org) 18+.
 
 ```bash
 npm install
-npm run dist      # build installer + portable into dist/
+npm run dist      # build installer into dist/
 # or
 npm start         # run in dev
 ```
